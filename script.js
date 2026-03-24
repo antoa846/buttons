@@ -1,10 +1,11 @@
-var modal = document.getElementById("popup-modal");
-var openBtn = document.getElementById("open-popup");
-var closeBtn = document.getElementsByClassName("close-btn")[0];
+const modal = document.querySelector("#popup-modal");
+const openBtn = document.querySelector("#open-popup");
+const closeBtn = document.querySelector(".close-btn")[0];
 const body = document.querySelector("body");
 
 // When the user clicks the button, open the modal
 openBtn.addEventListener('click', function(event) {
+  console.log("running")
   modal.style.display = "block";
 })
 

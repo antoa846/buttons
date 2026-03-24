@@ -13,7 +13,7 @@ button{
 #popup-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 1;
   right: 0;
   top: 0;
   width: 400px;
