@@ -1,11 +1,13 @@
 var modal = document.getElementById("popup-modal");
 var openBtn = document.getElementById("open-popup");
 var closeBtn = document.getElementsByClassName("close-btn")[0];
+const body = document.querySelector("body");
 
 // When the user clicks the button, open the modal
-openBtn.onclick = function() {
+openBtn.addEventListener('click', function(event) {
   modal.style.display = "block";
-}
+})
+
 
 // When the user clicks on (x), close the modal
 closeBtn.onclick = function() {
@@ -13,8 +15,12 @@ closeBtn.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+document.addEventListener("DOMContentLoaded", function(event) {
+  window.addEventListener('click', function(event) {
+    if (!modal.contains(event.target) && event.target !== openBtn) {
+        console.log("clicked");
+      modal.style.display = "none";
+    }
+  })
+})
+
