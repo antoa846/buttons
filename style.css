@@ -10,27 +10,6 @@ body{
   height: 100vh;
   margin: 0;
 }
-/* marquee {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    z-index: -10;
-  } */
-
-  marquee {
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-  overflow: hidden;
-  z-index: 1; /* Behind grid */
-}
-
-p {
-  display: inline-block;
-  white-space: nowrap;
-  animation: backAndForth 10s linear infinite alternate;
-}
 
 @keyframes backAndForth {
   from { transform: translateX(100%); }
@@ -57,9 +36,9 @@ p{
 }
 #title{
    position: relative; 
-    /* top: 50%;
+    top: 40%;
     left: 50%;
-   transform: translate(-50%, -50%); */
+   transform: translate(-50%, -50%);
    z-index:-10;
 }
 
@@ -88,3 +67,20 @@ section{
   padding-left:100px;
   padding-right:100px;
   }
+
+ #title{
+  position: absolute;
+  white-space: nowrap;
+  animation: bounce 7s linear infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    left: 0%;
+    transform: translateX(0%);
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
