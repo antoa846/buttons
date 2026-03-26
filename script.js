@@ -31,10 +31,5 @@ document.querySelectorAll('button').forEach(btn => {
   });
 });
 
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('button') && !modal.contains(e.target)) {
-    modal.style.display = 'none';
-    activeBtn = null;
-  }
-});
+
 

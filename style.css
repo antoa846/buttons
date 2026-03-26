@@ -1,44 +1,73 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
 body{
-    /* background-image: url("wood.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed; */
     font-family: 'Irish Grover';font-size: 22px;
     background-color: #f9efe4;
     display: flex;
   height: 100vh;
   margin: 0;
 }
+/* marquee {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+  } */
+
+  marquee {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  overflow: hidden;
+  z-index: 1; /* Behind grid */
+}
+
+p {
+  display: inline-block;
+  white-space: nowrap;
+  animation: backAndForth 10s linear infinite alternate;
+}
+
+@keyframes backAndForth {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
 button{
     all: unset;
     cursor: pointer;
     transition: transform 0.1s ease;
+  transform: scale(0.8); 
+  transform-origin: center; 
 }
 button:hover{
-  transform: scale(1.1) rotate(-5deg) translateY(3px) translateX(3px);
+  transform: scale(0.9) rotate(-5deg) translateY(3px) translateX(3px);
 }
 
 p{
   font-size:100px;
-  line-height: 95px;
+  line-height: 100px;
   text-align: center;
   transform: rotate(-4deg);
   color: #58649F ;
   -webkit-text-stroke: 4px #1B2555;
 }
 #title{
-   position: absolute; 
-    top: 50%;
+   position: relative; 
+    /* top: 50%;
     left: 50%;
-   transform: translate(-50%, -50%);
-   z-index:10;
+   transform: translate(-50%, -50%); */
+   z-index:-10;
 }
 
 #popup-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1;
-  width: 400px;
+  width: 250px;
 }
 
 .modal-content {
@@ -46,10 +75,16 @@ p{
   border: 5px solid #BB486F;
   background-color: #EEB9C8;
   color:#1B2555;
+  font-size:18px;
 }
 
 section{
   display:grid;
-  grid-template-columns: repeat(9, 160px);
-  grid-template-rows: repeat(4, 1fr);
-}
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 19.5%);
+  justify-content:center;
+  justify-items:space-around;
+  align-items:space-around;
+  padding-left:100px;
+  padding-right:100px;
+  }
