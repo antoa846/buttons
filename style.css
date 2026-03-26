@@ -1,36 +1,55 @@
-/* body{
-    background-image: url("wood.jpeg");
+body{
+    /* background-image: url("wood.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-} */
+    background-attachment: fixed; */
+    font-family: 'Irish Grover';font-size: 22px;
+    background-color: #f9efe4;
+    display: flex;
+  height: 100vh;
+  margin: 0;
+}
 button{
     all: unset;
     cursor: pointer;
+    transition: transform 0.1s ease;
+}
+button:hover{
+  transform: scale(1.1) rotate(-5deg) translateY(3px) translateX(3px);
 }
 
+p{
+  font-size:100px;
+  line-height: 95px;
+  text-align: center;
+  transform: rotate(-4deg);
+  color: #58649F ;
+  -webkit-text-stroke: 4px #1B2555;
+}
+#title{
+   position: absolute; 
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+   z-index:10;
+}
 
 #popup-modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1;
-  /* right: 0;
-  top: 0; */
   width: 400px;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
-  border: 1px solid #888;
-  width: 50%; /* Could be more or less, depending on screen size */
+  border: 5px solid #BB486F;
+  background-color: #EEB9C8;
+  color:#1B2555;
 }
 
-.close-btn {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+section{
+  display:grid;
+  grid-template-columns: repeat(9, 160px);
+  grid-template-rows: repeat(4, 1fr);
 }
