@@ -89,27 +89,40 @@ section{
 @media (max-width:1500px){
   section{
     display:grid;
-    grid-template-columns: repeat(3, 160px);
+    grid-template-columns: repeat(3, 170px);
     grid-template-rows: repeat(10, 10%);
-    padding-left:50px;
-    padding-right:50px;
+    padding-left:200px;
+    padding-right:200px;
   }
   button{
    transition: transform 0.1s ease;
-   transform: scale(0.5);
+   transform: scale(0.8);
    transform-origin: center; 
   }
   button:hover{
-    transform: scale(0.4) rotate(-5deg) translateY(3px) translateX(3px);
+    transform: scale(0.7) rotate(-5deg) translateY(3px) translateX(3px);
   }
   #popup-modal {
-    width: 180px;
+    width: 250px;
   }
   .modal-content {
-   padding: 10px;
-   border: 3px solid #BB486F;
-   background-color: #EEB9C8;
-   color:#1B2555;
-   font-size:12px;
+   padding: 15px;
+   border: 5px solid #BB486F;
+   font-size:22px;
   }
+  #title{
+  position: absolute;
+  white-space: nowrap;
+  animation: bounce 4s linear infinite alternate;
+  }
+@keyframes bounce {
+  from {
+    left: 0%;
+    transform: translateX(0%);
+  }
+  to {
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
 }
