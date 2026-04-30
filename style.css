@@ -85,3 +85,31 @@ section{
     transform: translateX(-100%);
   }
 }
+
+@media (max-width:1500px){
+  section{
+    display:grid;
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(10, 10%);
+    padding-left:50px;
+    padding-right:50px;
+  }
+  button{
+   transition: transform 0.1s ease;
+   transform: scale(0.5);
+   transform-origin: center; 
+  }
+  button:hover{
+    transform: scale(0.4) rotate(-5deg) translateY(3px) translateX(3px);
+  }
+  #popup-modal {
+    width: 180px;
+  }
+  .modal-content {
+   padding: 10px;
+   border: 3px solid #BB486F;
+   background-color: #EEB9C8;
+   color:#1B2555;
+   font-size:12px;
+  }
+}
